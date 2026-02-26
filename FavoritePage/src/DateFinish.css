@@ -1,0 +1,128 @@
+
+.date-finish-container {
+  display: flex;
+  max-width: 532px;
+  align-items: flex-end;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Date Input Group */
+.date-input-group {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.date-input-label {
+  font: 600 18px/24px 'TT Fors', sans-serif;
+  color: var(--Subtext, #5A5F67);  
+}
+
+/* Date Input Field */
+.date-input-field {
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  display: flex;
+  margin-top: 8px;
+  min-height: 48px;
+  width: 100%;
+  gap: 10px;
+  justify-content: flex-start;
+  background-color: var(--White, #FFF);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.date-placeholder {
+  color: var(--White-Black-Black, #3D4247);
+  align-self: stretch;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+  font: 400 16px 'TT Fors', sans-serif;
+}
+
+.date-icons {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  margin: auto 0;
+}
+
+.calendar-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin: auto 0;
+}
+
+/* Create Vote Button Wrapper */
+.create-vote-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--White, #FFF);
+  text-align: center;
+  justify-content: flex-start;
+  font: 400 16px 'TT Fors', sans-serif;
+}
+
+.create-vote-button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  /* opacity: 0.25; */
+  align-self: stretch;
+  display: flex;
+  min-height: 48px;
+  gap: 8px;
+  background-color: var(--Accent, #A89A7F);
+  margin: auto 0;
+  padding: 12px 24px;
+  border: none;
+}
+
+.create-vote-button-text {
+  color: var(--White, #FFF);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: auto 0;
+}
+
+
+@media (max-width: 991px) {
+  .create-vote-button {
+    padding: 12px 20px;
+  }
+  
+  .date-finish-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-input-group {
+    width: 100%;
+  }
+  
+  .create-vote-button-wrapper {
+    width: 100%;
+  }
+  
+  .create-vote-button {
+    width: 100%;
+  }
+}

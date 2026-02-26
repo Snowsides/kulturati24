@@ -1,0 +1,878 @@
+.card .card-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* 198px только для макета фаворитов при наличии чекбокса у фото */
+.result-content .card.card-container {
+  grid-template-columns: 198px 1fr auto;
+}
+
+.card.card-container {
+  grid-template-columns: 158px 1fr auto;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 12px;
+  display: grid;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
+  background-color: var(--White, #FFF);
+  width: 100%;
+  /* add  */
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.card .image-column {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+   /* add  */
+  display: flex;
+  gap: 20px;
+}
+
+.card .main-image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  max-width: 150px;
+}
+
+.card .thumbnail-container {
+  position: relative;
+  align-self: start;
+  display: flex;
+  margin: 12px 0;
+  align-items: start;
+  gap: 12px;
+  justify-content: start;
+}
+
+.card .grade-container .grade-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card .grade-container .grade-text strong {
+  font-weight: 400;
+  color: var(--Accent, #A89A7F);
+}
+
+.card .thumbnail-icon-face:hover,
+.card .thumbnail-icon-band:hover,
+.card .thumbnail-icon-museum:hover {
+  opacity: 0.8;
+}
+
+.card .thumbnail-icon-face {
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='26' viewBox='0 0 27 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.18085 12.6156L6.19594 12.611M14.6185 23.3915C13.8639 24.1687 13.2301 24.6698 13.0188 24.7347C12.2944 24.9535 4.82412 22.8029 3.60473 19.709C2.38232 16.6135 0.841476 10.9313 0.752436 10.3215C0.661887 9.71181 3.10671 7.71963 6.18085 6.38245M9.18255 18.5393C8.83997 18.9347 8.59398 19.3845 8.34346 19.8176M15.1859 12.8238C15.9405 13.5785 16.6951 14.407 18.2042 14.407C19.7134 14.407 20.468 13.5785 21.2225 12.8238M15.1859 6.78692H15.201M21.2225 6.78692H21.2376M10.6585 3.01385C10.6585 2.57617 14.4314 0.75 18.2042 0.75C21.9771 0.75 25.75 2.46449 25.75 3.01385V12.8238C25.75 15.791 19.2742 20.37 18.2042 20.37C17.083 20.37 10.6585 15.791 10.6585 12.8238V3.01385Z' stroke='%235A5F67' strokeWidth='1.5' strokeLinecap='round'/%3E%3C/svg%3E%0A");
+  width: 27px;
+  height: 26px;
+}
+
+.card .thumbnail-icon-band {
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='26' viewBox='0 0 21 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.71348 14.1125L0.75 22.7879L4.42785 21.5835L6.58612 24.75L9.09812 17.7364M16.9851 14.1125L19.95 22.7879L16.2708 21.5835L14.1125 24.75L11.6005 17.7364M6.45811 2.4669C7.25644 2.55891 8.04515 2.23685 8.54342 1.61709C8.75982 1.34686 9.03578 1.12842 9.35049 0.978228C9.66521 0.828035 10.0105 0.75 10.3603 0.75C10.7102 0.75 11.0554 0.828035 11.3702 0.978228C11.6849 1.12842 11.9608 1.34686 12.1772 1.61709C12.422 1.92211 12.7422 2.16037 13.1072 2.30914C13.4723 2.45792 13.8701 2.51223 14.2625 2.4669C14.6097 2.42645 14.9618 2.46394 15.2921 2.57654C15.6224 2.68913 15.9225 2.87391 16.1698 3.11696C16.417 3.36001 16.6049 3.65502 16.7195 3.97978C16.834 4.30455 16.8721 4.65062 16.831 4.99196C16.7374 5.77682 17.065 6.55355 17.6954 7.04341C17.97 7.25618 18.192 7.5274 18.3446 7.83667C18.4972 8.14594 18.5765 8.48521 18.5765 8.82895C18.5765 9.1727 18.4972 9.51197 18.3446 9.82124C18.192 10.1305 17.97 10.4017 17.6954 10.6145C17.3851 10.8551 17.1428 11.1699 16.9914 11.5288C16.8401 11.8877 16.7849 12.2787 16.831 12.6646C16.8721 13.0059 16.834 13.352 16.7195 13.6768C16.6049 14.0015 16.417 14.2965 16.1698 14.5396C15.9225 14.7826 15.6224 14.9674 15.2921 15.08C14.9618 15.1926 14.6097 15.2301 14.2625 15.1897C13.8698 15.1441 13.4718 15.1983 13.1065 15.3471C12.7412 15.4958 12.4207 15.7342 12.1759 16.0395C11.9594 16.3094 11.6835 16.5277 11.369 16.6777C11.0544 16.8277 10.7093 16.9057 10.3596 16.9057C10.01 16.9057 9.66489 16.8277 9.3503 16.6777C9.03572 16.5277 8.75984 16.3094 8.54342 16.0395C8.29866 15.7344 7.97847 15.4962 7.61341 15.3474C7.24834 15.1986 6.85059 15.1443 6.45811 15.1897C6.11079 15.2303 5.75862 15.193 5.4281 15.0805C5.09758 14.968 4.79733 14.7833 4.54994 14.5402C4.30255 14.2971 4.11447 14.002 3.99987 13.6771C3.88526 13.3523 3.84711 13.0061 3.88829 12.6646C3.93456 12.2789 3.87953 11.8879 3.72844 11.529C3.57736 11.1701 3.33527 10.8553 3.02526 10.6145C2.75039 10.4017 2.5282 10.1305 2.37543 9.82105C2.22265 9.51165 2.14328 9.17221 2.14328 8.82828C2.14328 8.48435 2.22265 8.1449 2.37543 7.8355C2.5282 7.5261 2.75039 7.25481 3.02526 7.04206C3.65567 6.55355 3.98326 5.77682 3.88829 4.99196C3.84711 4.65049 3.88526 4.30429 3.99987 3.97941C4.11447 3.65453 4.30255 3.35945 4.54994 3.11637C4.79733 2.87329 5.09758 2.68854 5.4281 2.57605C5.75862 2.46355 6.11079 2.42623 6.45811 2.4669Z' stroke='%235A5F67' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'/%3E%3Cpath d='M13.5504 8.75005C13.5504 10.5174 12.1177 11.95 10.3504 11.95C8.58308 11.95 7.15039 10.5174 7.15039 8.75005C7.15039 6.98274 8.58308 5.55005 10.3504 5.55005C12.1177 5.55005 13.5504 6.98274 13.5504 8.75005Z' stroke='%235A5F67' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E%0A");
+  width: 21px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.card .thumbnail-icon-museum{
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.4878 20.8521H2.0493C1.33172 20.8521 0.75 21.4338 0.75 22.1514V23.4507C0.75 24.1683 1.33172 24.75 2.0493 24.75H23.4878C24.2054 24.75 24.7871 24.1683 24.7871 23.4507V22.1514C24.7871 21.4338 24.2054 20.8521 23.4878 20.8521Z' stroke='%235A5F67' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'/%3E%3Cpath d='M3.99825 9.80534V20.8623M21.5388 9.80534V20.8623M16.0168 9.80534V20.8623M9.52029 9.80534V20.8623M11.5212 1.06893L1.42564 6.5909C1.22117 6.70278 1.05056 6.86759 0.931689 7.06807C0.812818 7.26854 0.750063 7.49731 0.75 7.73038V9.02577C0.75 9.23252 0.832134 9.43081 0.978334 9.57701C1.12453 9.72321 1.32282 9.80534 1.52958 9.80534H24.0075C24.2143 9.80534 24.4125 9.72321 24.5587 9.57701C24.7049 9.43081 24.7871 9.23252 24.7871 9.02577V7.73038C24.787 7.49731 24.7243 7.26854 24.6054 7.06807C24.4865 6.86759 24.3159 6.70278 24.1114 6.5909L14.0159 1.06893C13.6334 0.859675 13.2045 0.75 12.7685 0.75C12.3326 0.75 11.9037 0.859675 11.5212 1.06893Z' stroke='%235A5F67' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E%0A");
+  width: 26px;
+  height: 26px;
+}
+
+.card .title-column {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.card .text-column {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+}
+
+.card .event-title {
+  color: var(--Text, #2A2930);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.card .venue-info {
+  margin-top: 12px;
+  width: 100%;
+}
+
+
+.card .venue-name {
+  color: var(--Text, #2A2930);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.card .venue-address {
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 5px;
+}
+
+.card .event-details {
+  font-size: 18px;
+}
+
+.card .detail-row {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 12px;
+  line-height: 24px;
+  justify-content: start;
+}
+
+.card .detail-row-compact {
+  margin-top: 8px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.detail-row-multiline {
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.detail-row-nowrap {
+  white-space: nowrap;
+}
+
+.card .detail-label,
+.card .detail-value {
+  line-height: 24px;
+}
+
+.card .comment-title,
+.card .detail-label {
+  color: var(--Text, #2A2930);
+  width: 195px;
+}
+
+.card .comment-title {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+
+.card .detail-label.museum-label {
+  width: 125px;
+}
+
+.card .comment-content,
+.card .detail-value {
+  color: var(--Subtext, #5A5F67);
+  flex: 1 1 0%;
+}
+
+
+.card .comment-content {
+  margin: 12px 0;
+}
+
+.card .comment-content {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.card .detail-name {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card .detail-value-bold {
+  font-weight: 600;
+}
+
+.card .detail-value-multiline {
+  line-height: 24px;
+}
+
+.card .comment-section {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 12px;
+  line-height: 24px;
+  justify-content: start;
+}
+
+
+
+.card .pushkin-card-row {
+  display: flex;
+  margin-top: 9px;
+  width: 100%;
+  padding-left: 137px;
+  gap: 12px;
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card .pushkin-card-text {
+  display: flex;
+  min-width: 240px;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  flex: 1 1 0%;
+  color: var(--Subtext, #5A5F67);
+}
+
+.card .collapse-button {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card .collapse-text {
+  color: var(--Accent, #A89A7F);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card .event-description {
+  color: var(--Text, #2A2930);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+.card .visit-section {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 16px;
+  color: var(--Accent, #A89A7F);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card .visit-title {
+  color: var(--Text, #2A2930);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card .visit-option {
+  color: var(--Accent, #A89A7F);
+  font-feature-settings: 'liga' off, 'clig' off;
+  text-decoration-skip-ink: auto;
+  margin-top: 8px;
+}
+
+.card .option-number {
+  color: rgba(168, 154, 127, 1);
+}
+
+.card .option-link a {
+  text-decoration: underline;
+  color: rgba(168, 154, 127, 1);
+}
+
+.card .rating {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.card .rating-section {
+  display: flex;
+  margin-top:10px;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  color: var(--Text, #2A2930);
+  justify-content: start;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px; 
+}
+
+.card .rating-text {
+  color: var(--Text, #2A2930);
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.card .like-icon,
+.card .dislike-icon {
+  width: 19px;
+  height: 24px;
+  margin: auto 3px;
+}
+
+.card .aside-section {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .schedule-title {
+  color: var(--Text, #2A2930);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card  .schedule-votes {
+  /* color: var(--Subtext, #5A5F67); */
+  color: var(--Accent, #A89A7F);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.card  .schedule-finish{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.card .schedule {
+  margin-bottom: 40px;
+}
+
+.card .schedule-date {
+  color: var(--Subtext, #5A5F67);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.card .action-buttons {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: end;
+}
+
+.card .more-dates-button {
+  display: flex;
+  margin-top: 8px;
+  gap: 8px;
+  color: var(--Accent, #A89A7F);
+  justify-content: flex-start;
+}
+
+.card .more-dates-text {
+  color: var(--Accent, #A89A7F);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.card .arrow-icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 6.25L10 13.75L2.5 6.25' stroke='%23A89A7F' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E%0A");
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.card .dislike-icon path,
+.card .like-icon path {
+  stroke: #5A5F67;
+}
+
+.card .dislike-icon:hover path {
+  fill: #FFE3E1;
+  stroke: #F44336;
+}
+
+.card .like-icon:hover path {
+  fill: #EFF5EF;
+  stroke: #289558;
+}
+
+.card .button-primary {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  background-color: var(--Light-Grey, #E9E9E9);
+  padding: 8px 20px;
+}
+
+.card .button-primary {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  background-color: var(--Light-Grey, #E9E9E9);
+  padding: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.card .button-primary-text a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--Text, #2A2930);
+  margin: auto 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card .button-secondary-text a {
+  color: var(--White, #FFF);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card .button-secondary {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  color: var(--White, #FFF);
+  background-color: var(--Accent, #A89A7F);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.card .button-add-date {
+  background-color: var(--Accent, #A89A7F);
+  display: flex;
+  min-height: 36px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 12px 24px;
+}
+
+.card .button-edit {
+  background-color: var(--Light-Grey, #E9E9E9);
+  
+  display: flex;
+  min-height: 36px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 12px 24px;
+}
+
+.card .button-add-date-text{
+  color: var(--White, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.card .button-edit-text{
+  color: var(--Text, #2A2930);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.card .button-secondary.button-secondary_red {
+  background-color: var(--Light-Grey, #E9E9E9);
+}
+
+.card .button-secondary.button-secondary_red a {
+  color: var(--Error, #F44336);
+}
+
+.card .select-all-control {
+  align-self: stretch;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  justify-content: start;
+  margin: 12px 0;
+}
+
+.card .checkbox-wrapper {
+  width: 24px;
+}
+
+.card .checkbox {
+  border-radius: 4px;
+  border: 2px solid var(--Darker-Grey, #C0C0C0);
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: var(--White, #FFF);
+}
+
+.card .select-all-text {
+  color: var(--Error, #F44336);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media (max-width: 1196px) {
+
+  .result-content .card.card-container {
+    grid-template-columns: 198px 1fr 196px;
+  }
+
+  .card.card-container {
+    grid-template-columns: 150px 1fr 196px;
+  }
+
+
+  .card .event-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .card .venue-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .card .venue-address {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .card .detail-label, 
+  .card .detail-value {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .card .detail-name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .card .detail-value.detail-value-bold {
+  font-weight: 600;
+}
+
+  .card .pushkin-card-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .card .collapse-button {
+    font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+  }
+
+  .card .grade-container .grade-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .card .schedule-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px; 
+  }
+
+  .card .schedule-votes {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px; 
+  }
+
+  .card .event-description {
+    color: var(--Text, #2A2930);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .collection .back-button {
+    width: auto;
+  }
+
+    .card .comment-section {
+    max-width: 100%;
+  }
+
+  .card .comment-title {
+    width: 125px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card .comment-content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card .button-edit {
+    cursor: pointer;
+    white-space: wrap;
+  }
+
+  .card .button-edit-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+}
+
+@media (max-width: 899px) {
+
+  .result-content .card.card-container {
+     grid-template-columns: 100%;
+  }
+
+  .card.card-container {
+     grid-template-columns: 100%;
+  }
+
+  .result-content .card.card-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    overflow-x: hidden;
+    row-gap: 20px;
+    padding: 20px;
+  }
+
+  .card .title-column {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .card .image-column {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+  }
+
+  .card .image-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .card .main-image {
+    max-width: 125px;
+  }
+
+  .card .thumbnail-container {
+    align-self: center;
+    margin-left: 1em;
+  }
+  
+  .card .aside-section {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  
+  .card .text-column {
+    grid-column: 1;
+    grid-row: 3;
+    overflow: hidden;
+  }
+
+  .card .action-buttons {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .card .hint-wrapper {
+    width: 230px;
+    top: -140px;
+    left: -72px;
+  }
+
+  .card .rating {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  .card .button-add-date {
+    width: 100%;
+  }
+
+  .card .button-add-date-text{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card .visit-section {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .comment-section {
+    display: flex;
+  }
+
+  .card .visit-title,
+  .card .event-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card .venue-info {
+    margin-top: 8px;
+  }
+
+  .card .event-description,
+  .card .venue-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .venue-address {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .detail-label,
+  .card .detail-value {
+    font-size: 14px;
+    line-height: 20px;
+ }
+
+  .card .comment-title {
+    width: auto;
+  }
+  .card .detail-label {
+    width: 125px;
+  }
+
+  .card .pushkin-card-row,
+  .card .detail-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .event-details {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .collapse-button {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .card .schedule-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .card .more-dates-text {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .button-secondary-text a,
+  .card .button-primary-text a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card .rating-section {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .button-primary,
+  .card .button-secondary {
+    padding: 12px 24px;
+  }
+
+  .card .grade-container {
+    display: none;
+  }
+
+  .card .schedule-votes {
+    color: var(--Subtext, #5A5F67);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+  }
+
+  .card .comment-section {
+    max-width: 100%;
+  }
+
+  .card .comment-title {
+    width: 125px;
+    color: var(--Text, #2A2930);
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .comment-content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card .button-edit {
+    cursor: pointer;
+    white-space: wrap;
+  }
+
+  .card .button-edit-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+}
+
+

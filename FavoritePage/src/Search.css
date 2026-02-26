@@ -1,0 +1,249 @@
+.research.search-container {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: start;
+}
+
+
+
+.research .search-wrapper {
+  min-width: 240px;
+  width: 100%;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.research .search-input-field {
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  display: flex;
+  width: 100%;
+  color: var(--Darker-Grey, #C0C0C0);
+  flex-wrap: wrap;
+  background-color: var(--White, #FFF);
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.research .search-placeholder {
+  color: var(--Darker-Grey, #C0C0C0);
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.research .search-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin: auto 0;
+}
+
+.research .search-controls-row {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.research .select-all-control {
+  align-self: stretch;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  justify-content: start;
+  margin: auto 0;
+}
+
+.checkbox-wrapper {
+  width: 24px;
+}
+
+.checkbox {
+  border-radius: 4px;
+  border: 2px solid var(--Darker-Grey, #C0C0C0);
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: var(--White, #FFF);
+}
+
+.research .select-all-text {
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  }
+
+.research .collection-select {
+  align-self: stretch;
+  min-width: 240px;
+  color: var(--Darker-Grey, #C0C0C0);
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+  font: 400 16px TT Fors, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.research .collection-select-field {
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  display: flex;
+  min-height: 48px;
+  width: 100%;
+  gap: 12px;
+  justify-content: start;
+  flex-wrap: wrap;
+  background-color: var(--White, #FFF);
+  padding: 12px;
+}
+
+.research .result-input {
+  color: var(--Darker-Grey, #C0C0C0);
+  font-size: 16px;
+  font-family: "TT Fors", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+  width: 100%;
+  padding: 0px;
+  border: 0;
+  background: var(--White, #FFF);
+}
+
+.research .collection-select-placeholder {
+  align-self: stretch;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+}
+
+.research .dropdown-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin: auto 0;
+}
+
+.research .save-button-wrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--White, #FFF);
+  text-align: center;
+  justify-content: start;
+  margin: auto 0;
+  font: 400 16px TT Fors, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.research .save-button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  /* opacity: 0.25; */
+  align-self: stretch;
+  display: flex;
+  min-height: 48px;
+  gap: 8px;
+  background-color: var(--Accent, #A89A7F);
+  margin: auto 0;
+  padding: 12px 24px;
+}
+
+.research .save-button-text {
+  color: var(--White, #FFF);
+  margin: auto 0;
+}
+
+.research .count-selected-wrapper {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: flex-start;
+  
+}
+
+.research .count-selected-text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px; 
+  color: var(--Subtext, #5A5F67);
+}
+
+
+@media (max-width: 991px) {
+  .research.search-container {
+    max-width: 100%;
+  }
+
+   .research .search-wrapper {
+    max-width: 100%;
+  }
+
+  .research .search-input-field {
+    max-width: 100%;
+  }
+
+  .research .search-controls-row {
+    max-width: 100%;
+  }
+
+  .research .collection-select {
+    max-width: 100%;
+  }
+
+  .research .collection-select-field {
+    max-width: 100%;
+  }
+
+  .research .collection-select-placeholder {
+    max-width: 100%;
+  }
+
+  .research .save-button {
+    padding: 0 20px;
+  }
+
+  .research .count-selected-wrapper {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 681px) {
+
+  .research .save-button {
+    width: 100%;
+  }
+
+  .research .select-all-control {
+    order: 3;
+  }
+
+  .research .save-button-wrapper {
+    width: 100%;
+  }
+
+  .research .count-selected-wrapper {
+    margin-top: 12px;
+  }
+
+
+}

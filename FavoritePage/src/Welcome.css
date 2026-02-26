@@ -1,0 +1,120 @@
+.welcome-container {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 20px 45px;
+}
+
+.welcome-container .welcome-landing-card {
+  background-color: var(--White, #FFF);
+  padding: 32px;
+  width: 100%;
+ 
+}
+
+.welcome-container .welcome-corner-decor {
+  background: #0000;
+  display: block;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  z-index: 2;
+}
+
+.welcome-container .welcome-corner-decor.welcome-corner-top-right {
+  right: -15px;
+  top: -15px;
+}
+
+.welcome-container .welcome-corner-decor.welcome-corner-bottom-left {
+  bottom: -15px;
+  left: -15px;
+  transform: rotate(180deg);
+}
+
+.welcome-container .welcome-corner-decor::after {
+  right: 0;
+  top: 0;
+}
+
+.welcome-container .welcome-corner-decor::before {
+  right: 0;
+  top: 0;
+}
+
+.welcome-container .welcome-corner-decor::after {
+  height: 50px;
+  width: 10px;
+  background: #a89a7f;
+  content: "";
+  position: absolute;
+}
+
+.welcome-container .welcome-corner-decor::before {
+  height: 10px;
+  width: 50px;
+  background: #a89a7f;
+  content: "";
+  position: absolute;
+}
+
+.welcome-container .welcome-title {
+  color: var(--Text, #2A2930);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 0 20px;
+}
+
+.welcome-container .welcome-message {
+  color: var(--Subtext, #5A5F67);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.welcome-spacer .welcome-head {
+  color: var(--Text, #2A2930);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 12px;
+}
+
+.welcome-spacer .welcome-body {
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+
+  .welcome-container .welcome-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .welcome-container .welcome-message {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
+
+@media (max-width: 681px) {
+  .welcome-container .welcome-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .welcome-container .welcome-message {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

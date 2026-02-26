@@ -1,0 +1,51 @@
+:root {
+
+  /* CSS Variables */
+  --Text: #2A2930;
+  --Subtext: #5A5F67;
+  --Accent: #A89A7F;
+  --White: #FFF;
+  --Grey-Bg: #F3F4F6;
+  --Light-Grey: #E9E9E9;
+  --Darker-Grey: #C0C0C0;
+
+  line-height: 1.5;
+  font-weight: 400;
+  color: #2A2930;
+  background-color: #F5F5F5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'TT Fors';
+  src: url('./fonts/TT_Fors_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Fors';
+  src: url('./fonts/TT_Fors_DemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Fors';
+  src: url('./fonts/TT_Fors_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'TT Fors', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}

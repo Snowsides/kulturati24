@@ -1,0 +1,218 @@
+.vote-modal.create-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.vote-modal .create-modal-window {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-modal .create-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vote-modal .create-modal-title {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.vote-modal .create-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #666;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.vote-modal .create-modal-close:hover {
+  color: #000;
+}
+
+
+.vote-modal .create-modal-label {
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.vote-modal .create-modal-info {
+  color: var(--Subtext, #5A5F67);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.vote-modal .input-field {
+  display: flex;
+  height: 48px;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  background: var(--White, #FFF);
+  margin-top: 8px;
+}
+
+.vote-modal .input-field.input-field_bg {
+  background: var(--Grey-Bg, #F3F4F6);
+}
+
+.vote-modal .create-modal-input {
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--Darker-Grey, #C0C0C0);
+  border: none;
+  outline: none;
+  font-family: "TT Fors", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+
+.vote-modal .create-modal-input::placeholder {
+  color: #ccc;
+}
+
+.create-modal-input:focus {
+  border-color: #A89A7F;
+}
+
+.vote-modal .create-modal-actions {
+  display: flex;
+  gap: 16px;
+  
+}
+
+.vote-modal .create-modal-button {
+  display: flex;
+  min-height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.vote-modal .close-button,
+.vote-modal .create-button {
+  border: none;
+  text-align: center;
+  font-family: 'TT Fors', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.vote-modal .create-button {
+  color: var(--White, #FFF);
+  background-color: #A89A7F;
+}
+
+.vote-modal .create-button.create-button_bg{
+  background: var(--Error, #F44336);
+}
+
+.vote-modal .close-button {
+  background-color: #E8E8E8;
+  color: #000;
+}
+
+.vote-modal .create-button:hover {
+  background-color: #927f65;
+}
+
+.vote-modal .close-button:hover {
+  background-color: #d8d8d8;
+}
+
+@media (max-width: 901px) {
+
+  .vote-modal .create-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px; 
+  }
+
+  .vote-modal .create-modal-info {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .vote-modal .create-modal-label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .vote-modal .create-modal-window {
+    max-width: 343px;
+    width: 100%;
+  }
+
+  .vote-modal .create-modal-actions {
+    flex-direction: column;
+  }
+
+  .vote-modal .create-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px; 
+  }
+
+  .vote-modal .create-modal-label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .vote-modal .create-modal-info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .vote-modal .create-modal-actions {
+    gap: 12px;
+  }
+
+
+}
