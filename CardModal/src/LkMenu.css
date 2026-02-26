@@ -1,0 +1,110 @@
+.lk-menu {
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
+  max-width: 388px;
+  background-color: var(--White, #FFF);
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.lk-menu .lk-mode-label {
+  width: 100%;
+  color: var(--Text, #2A2930);
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.lk-menu .lk-tabs {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.lk-menu .lk-tab {
+  border-bottom: 2px solid var(--Light-Grey, #E9E9E9);
+  color: var(--Text, #2A2930);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.lk-menu .lk-tab-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.lk-menu .lk-tab-active .lk-tab-icon.icon_personal {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.93318 12.6112C4.8721 13.243 2.09002 14.5331 3.7845 16.1474C4.61223 16.936 5.53412 17.5 6.69315 17.5H13.3068C14.4659 17.5 15.3878 16.936 16.2155 16.1474C17.91 14.5331 15.1279 13.243 14.0668 12.6112C11.5786 11.1296 8.42139 11.1296 5.93318 12.6112Z' stroke='%23A89A7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.375 5.875C13.375 7.73896 11.864 9.25 10 9.25C8.13604 9.25 6.625 7.73896 6.625 5.875C6.625 4.01104 8.13604 2.5 10 2.5C11.864 2.5 13.375 4.01104 13.375 5.875Z' stroke='%23A89A7F' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+}
+
+.lk-menu .lk-tab-icon.icon_personal {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.93318 12.6112C4.8721 13.243 2.09002 14.5331 3.7845 16.1474C4.61223 16.936 5.53412 17.5 6.69315 17.5H13.3068C14.4659 17.5 15.3878 16.936 16.2155 16.1474C17.91 14.5331 15.1279 13.243 14.0668 12.6112C11.5786 11.1296 8.42139 11.1296 5.93318 12.6112Z' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.375 5.875C13.375 7.73896 11.864 9.25 10 9.25C8.13604 9.25 6.625 7.73896 6.625 5.875C6.625 4.01104 8.13604 2.5 10 2.5C11.864 2.5 13.375 4.01104 13.375 5.875Z' stroke='%235A5F67' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+}
+
+.lk-menu .lk-tab-active .lk-tab-icon.icon_group {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.1787 14.9091C17.7918 14.9091 18.2794 14.5233 18.7172 13.9839C19.6135 12.8796 18.142 11.9971 17.5807 11.5649C17.0102 11.1255 16.3731 10.8766 15.7272 10.8182M14.9091 9.18185C16.0387 9.18185 16.9545 8.26607 16.9545 7.1364C16.9545 6.00672 16.0387 5.09094 14.9091 5.09094' stroke='%23A89A7F' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M2.82124 14.9091C2.20817 14.9091 1.72055 14.5233 1.28272 13.9839C0.386436 12.8796 1.858 11.9971 2.41926 11.5649C2.9898 11.1255 3.62684 10.8766 4.27273 10.8182M4.68182 9.18185C3.55214 9.18185 2.63636 8.26607 2.63636 7.1364C2.63636 6.00672 3.55214 5.09094 4.68182 5.09094' stroke='%23A89A7F' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M6.79578 12.5455C5.95978 13.0624 3.76784 14.118 5.10288 15.4388C5.75504 16.084 6.48137 16.5454 7.39455 16.5454H12.6053C13.5185 16.5454 14.2449 16.084 14.897 15.4388C16.232 14.118 14.0401 13.0624 13.2041 12.5455C11.2437 11.3333 8.75619 11.3333 6.79578 12.5455Z' stroke='%23A89A7F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.8636 6.31823C12.8636 7.89977 11.5815 9.18186 9.99999 9.18186C8.41845 9.18186 7.13635 7.89977 7.13635 6.31823C7.13635 4.73668 8.41845 3.45459 9.99999 3.45459C11.5815 3.45459 12.8636 4.73668 12.8636 6.31823Z' stroke='%23A89A7F' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+}
+
+.lk-menu .lk-tab-icon.icon_group {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.1787 14.9091C17.7918 14.9091 18.2794 14.5233 18.7172 13.9839C19.6135 12.8796 18.142 11.9971 17.5807 11.5649C17.0102 11.1255 16.3731 10.8766 15.7272 10.8182M14.9091 9.18185C16.0387 9.18185 16.9545 8.26607 16.9545 7.1364C16.9545 6.00672 16.0387 5.09094 14.9091 5.09094' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M2.82124 14.9091C2.20817 14.9091 1.72055 14.5233 1.28272 13.9839C0.386436 12.8796 1.858 11.9971 2.41926 11.5649C2.9898 11.1255 3.62684 10.8766 4.27273 10.8182M4.68182 9.18185C3.55214 9.18185 2.63636 8.26607 2.63636 7.1364C2.63636 6.00672 3.55214 5.09094 4.68182 5.09094' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M6.79578 12.5455C5.95978 13.0624 3.76784 14.118 5.10288 15.4388C5.75504 16.084 6.48137 16.5454 7.39455 16.5454H12.6053C13.5185 16.5454 14.2449 16.084 14.897 15.4388C16.232 14.118 14.0401 13.0624 13.2041 12.5455C11.2437 11.3333 8.75619 11.3333 6.79578 12.5455Z' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.8636 6.31823C12.8636 7.89977 11.5815 9.18186 9.99999 9.18186C8.41845 9.18186 7.13635 7.89977 7.13635 6.31823C7.13635 4.73668 8.41845 3.45459 9.99999 3.45459C11.5815 3.45459 12.8636 4.73668 12.8636 6.31823Z' stroke='%235A5F67' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+}
+
+.lk-menu .lk-tab-active {
+  border-bottom: 2px solid var(--Accent-Hover, #918266);
+  color: var(--Accent, #A89A7F);
+}
+
+.lk-menu .lk-tab-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.lk-menu .lk-tab-icon {
+  display: flex;
+  width: 20px;
+  flex-shrink: 0;
+  height: 20px;
+}
+
+.lk-menu .lk-tab-text {
+  white-space: nowrap;
+}
+
+.lk-menu .lk-tab-active .lk-tab-text {
+  color: var(--Accent, #A89A7F);
+}
+
+.lk-menu .lk-menu-item .link-item,
+.lk-menu .lk-menu-item {
+  margin-top: 12px;
+  width: 100%;
+  color: var(--Text, #2A2930);
+  padding: 0 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lk-menu .lk-menu-item .link-item:hover,
+.lk-menu .lk-menu-item:hover {
+  color: var(--Accent, #A89A7F);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+
+  .lk-menu {
+    max-width: 100%;
+  }
+
+  .lk-menu .lk-tabs {
+    flex-direction: column;
+  }
+  
+}
+
+

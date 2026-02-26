@@ -1,0 +1,267 @@
+.filters-container {
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);
+  background-color: #FFF;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filters .filters-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Text, #2A2930);
+  font-family: "TT Fors", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.filters .filters-title {
+  color: var(--Text, #2A2930);
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.filters .filters-close-icon {
+  height: 20px;
+  width: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 5.625H3M17 9.99374H8.25M17 14.375H13.5' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+
+.filters .filters-divider {
+  margin-top: 20px;
+  width: 100%;
+  border-top: 1px solid rgba(192, 192, 192, 1);
+}
+
+.filters .filter-section {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+}
+
+.filters .filter-section-title {
+  color: var(--Text, #2A2930);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.filters .filter-input-field {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey, #E9E9E9);
+  display: flex;
+  margin-top: 12px;
+  width: 100%;
+  white-space: nowrap;
+  background-color: var(--White, #FFF);
+  padding: 12px;
+}
+
+.filters .filter-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--Text, #2A2930);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'TT Fors',  sans-serif;
+  flex: 1;
+  width: 100%;
+}
+
+.filters .filter-search-input::placeholder {
+  color: #C0C0C0;
+}
+
+.filters .filter-search-icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z' stroke='%23C0C0C0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+}
+
+.filters .filter-checkbox-item {
+  display: flex;
+  margin-top: 12px;
+  width: 100%;
+  align-items: start;
+  gap: 12px;
+  justify-content: start;
+  cursor: pointer;
+  position: relative;
+}
+
+.filters .filter-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.filters .filter-checkbox-box {
+  border-radius: 4px;
+  border: 2px solid #C0C0C0;
+  display: flex;
+  width: 24px;
+  flex-shrink: 0;
+  height: 24px;
+  background-color: var(--White, #FFF);
+  transition: all 0.2s;
+}
+
+.filter-checkbox-input:checked + .filter-checkbox-box {
+  background-color: var(--Accent, #A89A7F);
+  border-color: var(--Accent, #A89A7F);
+}
+
+.filter-checkbox-input:checked + .filter-checkbox-box::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin: 2px auto auto 7px;
+}
+
+.filters .filter-checkbox-label {
+  color: #2a2930;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.filters .filter-count {
+  color: rgba(90, 95, 103, 1);
+}
+
+.filters .filter-show-more-button {
+  border-radius: 61px;
+  align-self: start;
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  gap: 8px;
+  color: var(--Accent, #A89A7F);
+  text-align: center;
+  justify-content: center;
+  font: 600 16px 'TT Fors', -apple-system, Roboto, Helvetica, sans-serif;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-feature-settings: 'liga' off, 'clig' off;
+}
+
+.filters .filter-show-more-button:hover {
+  opacity: 0.8;
+}
+
+.filters .filter-age-slider {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.filters .filter-age-slider-track {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: var(--Light-Grey, #E9E9E9);
+}
+
+.filters input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: #A89A7F;
+    height: 2rem;
+    width: 1rem;
+}
+
+.filters .filter-age-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.filters .filter-age-slider-label {
+  color: var(--Subtext, #5A5F67);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+
+
+@media (max-width: 1278px) {
+
+ .filters .filter-checkbox-item-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filters .filter-checkbox-item {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 991px) {
+  .filters .filters-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .filters .filter-section-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+  }
+
+  .filters .filters-close-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 6.25L10 13.75L2.5 6.25' stroke='%235A5F67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+}
+
+@media (max-width: 681px) {
+
+  .filters .filter-section-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+  }
+
+  .filters .filters-title {
+    color: var(--Text, #2A2930);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .filters .filter-checkbox-item {
+    width: 100%;
+  }
+
+  
+
+}

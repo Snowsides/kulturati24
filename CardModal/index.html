@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardModal</title> 
+    
+    <script>
+
+      const range1 = document.querySelector('#tailmetr1')
+      range1.addEventListener('input', handleInputRange1)
+
+      const range2 = document.querySelector('#tailmetr2')
+      range2.addEventListener('input', handleInputRange2)
+
+      function handleInputRange1() {
+        const value2 = event.target.parentNode.parentNode.style.getPropertyValue('--value-2')
+        if (parseInt(event.target.value) >= parseInt(value2)) {
+          event.target.value = value2
+        }
+        if (event.target.value === '100') {
+          event.target.style.zIndex = '100'
+        } else {
+          event.target.style.zIndex = '0'
+        }
+        event.target.parentNode.parentNode.style.setProperty(
+          '--value-1',
+          event.target.value
+        )
+        event.target.nextElementSibling.value = event.target.value
+      }
+
+      function handleInputRange2() {
+        const value1 = event.target.parentNode.parentNode.style.getPropertyValue('--value-1');
+        if (parseInt(event.target.value) <= parseInt(value1)) {
+          console.log(event.target.value)
+          event.target.value = value1
+        }
+        if (event.target.value === '0') {
+          event.target.style.zIndex = '100'
+        } else {
+          event.target.style.zIndex = '0'
+        }
+        event.target.parentNode.parentNode.style.setProperty(
+          "--value-2",
+          event.target.value
+        )
+        event.target.nextElementSibling.value = event.target.value
+      }
+    </script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
