@@ -1,0 +1,616 @@
+:root {
+  --White: #FFF;
+  --Text: #2A2930;
+  --Subtext: #5A5F67;
+  --Accent: #A89A7F;
+  --Light-Grey: #E9E9E9;
+  --Darker-Grey: #C0C0C0;
+  --Blue-Gray: #3d4247;
+  --Error: #F44336;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.profile.form-container {
+  width: 1240px;
+  max-width: 1240px;
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--White);
+}
+
+.profile .tab-group {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+}
+
+.profile .tab {
+  display: flex;
+  padding: 8px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  cursor: pointer;
+  min-width: 240px;
+  margin: auto 0;
+}
+
+.profile .tab-active {
+  border-bottom: 2px solid var(--Accent);
+}
+
+.profile .tab-inactive {
+  border-bottom: 2px solid var(--Light-Grey);
+}
+
+.profile .tab-label {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.profile .tab-label-active {
+  color: var(--Accent);
+}
+
+.profile .tab-label-inactive {
+  color: var(--Text);
+}
+
+.profile .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  margin-top: 20px;
+}
+
+.profile .section-title {
+  align-self: stretch;
+  color: var(--Text);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.profile .section-description {
+  align-self: stretch;
+  color: var(--Subtext);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.profile .input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.profile .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.profile .input-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.profile .input-label {
+  color: var(--Subtext);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.profile .input-field {
+  display: flex;
+  min-height: 48px;
+  padding: 12px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid var(--Light-Grey);
+  background-color: var(--White);
+}
+
+.profile .input-text {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--Blue-Gray);
+  flex: 1;
+  width: 100%;
+}
+
+.profile .input-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile .input-icons:hover svg path {
+  stroke: #2A2930;
+}
+
+.profile .dropdown-icon,
+.profile .clear-icon,
+.profile .eye-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.profile .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.profile .button-cancel,
+.profile .button-save {
+  display: flex;
+  min-height: 48px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  font-family: inherit;
+}
+
+.profile .button-cancel {
+  color: var(--Text);
+  background: var(--Light-Grey);
+}
+
+.profile .button-save {
+  color: var(--White);
+  background-color: var(--Accent);
+  opacity: .65;
+}
+
+.profile .button-save:hover{
+  opacity: 1;
+}
+
+.profile .subscription-content {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile .current-mode {
+  color: var(--Text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile .current-plan {
+  color: var(--Text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile .subscription-notice {
+  color: #5a5f67;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-skip-ink: auto;
+}
+
+.profile .underlined-link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--Accent);
+}
+
+.profile .mode-selector {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  color: var(--Text);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: var(--Light-Grey);
+  gap: 0;
+}
+
+.profile .plan-options {
+   display: flex;
+   flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.profile .mode-option {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  align-self: stretch;
+  min-width: 240px;
+  gap: 4px;
+  flex: 1 0 0;
+  margin: auto 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile .mode-option-active {
+  color: var(--Accent);
+  background-color: var(--White);
+}
+
+.profile .mode-option-label {
+  color: var(--Text);
+  font-size: 16px;
+  font-weight: 400;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.profile .mode-option-label-active {
+  color: var(--Accent);
+}
+
+.profile .mode-option-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3C13.8661 3 17 6.1339 17 10C17 13.8661 13.8661 17 10 17C6.1339 17 3 13.8661 3 10C3 6.1339 6.1339 3 10 3ZM10 4.4C8.51479 4.4 7.09041 4.99 6.0402 6.0402C4.99 7.09041 4.4 8.51479 4.4 10C4.4 11.4852 4.99 12.9096 6.0402 13.9598C7.09041 15.01 8.51479 15.6 10 15.6C11.4852 15.6 12.9096 15.01 13.9598 13.9598C15.01 12.9096 15.6 11.4852 15.6 10C15.6 8.51479 15.01 7.09041 13.9598 6.0402C12.9096 4.99 11.4852 4.4 10 4.4ZM10 12.8C10.1857 12.8 10.3637 12.8737 10.495 13.005C10.6263 13.1363 10.7 13.3143 10.7 13.5C10.7 13.6857 10.6263 13.8637 10.495 13.995C10.3637 14.1263 10.1857 14.2 10 14.2C9.81435 14.2 9.6363 14.1263 9.50503 13.995C9.37375 13.8637 9.3 13.6857 9.3 13.5C9.3 13.3143 9.37375 13.1363 9.50503 13.005C9.6363 12.8737 9.81435 12.8 10 12.8ZM10 6.15C10.5896 6.15002 11.1608 6.35535 11.6154 6.73072C12.0701 7.10609 12.3799 7.62808 12.4915 8.207C12.6032 8.78593 12.5097 9.38567 12.2273 9.9032C11.9448 10.4207 11.4909 10.8237 10.9436 11.043C10.8625 11.0728 10.7895 11.121 10.7301 11.1837C10.6993 11.2187 10.6944 11.2635 10.6951 11.3097L10.7 11.4C10.6998 11.5784 10.6315 11.75 10.509 11.8798C10.3865 12.0095 10.2191 12.0876 10.041 12.098C9.86291 12.1085 9.68753 12.0505 9.55072 11.936C9.4139 11.8215 9.32597 11.6591 9.3049 11.4819L9.3 11.4V11.225C9.3 10.4179 9.951 9.9335 10.4228 9.7438C10.6148 9.66712 10.7823 9.53959 10.9073 9.37489C11.0323 9.21019 11.1101 9.01456 11.1323 8.80899C11.1545 8.60342 11.1203 8.39569 11.0334 8.2081C10.9464 8.02051 10.81 7.86015 10.6388 7.74423C10.4676 7.62832 10.268 7.56124 10.0615 7.55019C9.85507 7.53914 9.64949 7.58454 9.46688 7.68151C9.28426 7.77848 9.13152 7.92337 9.02504 8.10061C8.91856 8.27784 8.86237 8.48074 8.8625 8.6875C8.8625 8.87315 8.78875 9.0512 8.65747 9.18247C8.5262 9.31375 8.34815 9.3875 8.1625 9.3875C7.97685 9.3875 7.7988 9.31375 7.66753 9.18247C7.53625 9.0512 7.4625 8.87315 7.4625 8.6875C7.4625 8.01451 7.72984 7.36909 8.20572 6.89322C8.68159 6.41734 9.32701 6.15 10 6.15Z' fill='%23A89A7F'/%3E%3C/svg%3E%0A");
+}
+
+.profile .plan-option {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 12px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile .radio-control {
+  width: 24px;
+}
+
+.profile .radio-button {
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.profile .radio-button-selected {
+  border: 2px solid var(--Accent);
+  background-color: var(--Accent);
+  padding: 0 2px;
+}
+
+.profile .radio-button-unselected {
+  border: 2px solid var(--Darker-Grey);
+  background-color: var(--White);
+}
+
+.profile .radio-button-inner {
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  display: flex;
+  width: 8px;
+  flex-shrink: 0;
+  height: 8px;
+  background-color: var(--White);
+}
+
+.profile .plan-option-label {
+  color: var(--Text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  flex: 1 0 0;
+}
+
+.profile .payment-notice {
+  color: var(--Subtext);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile .payment-fields-row {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile .payment-fields-row-single {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.profile .payment-input-group {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex: 1 0 0;
+  gap: 8px;
+}
+
+.profile .payment-input-group-owner {
+  max-width: 380px;
+  /* flex: none; */
+}
+
+.profile .subscription-buttons {
+  display: flex;
+  align-self: center;
+  margin-top: 20px;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.profile .subscription-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  min-height: 48px;
+  min-width: 240px;
+  border: none;
+  outline: none;
+}
+
+.profile .subscription-button-cancel {
+  color: var(--Text);
+  background-color: var(--Light-Grey);
+}
+
+.profile .subscription-button-unsubscribe {
+  color: var(--Error);
+  background-color: var(--Light-Grey);
+}
+
+.profile .subscription-button-submit {
+  color: var(--White);
+  background-color: var(--Accent);
+  opacity: .65;
+}
+
+.profile .subscription-button-submit:hover {
+  opacity: 1;
+  color: var(--Text);
+}
+
+@media (max-width: 991px) {
+
+  .profile .tab-label {
+    font-size: 18px;
+  }
+
+  .profile .section-title {
+    font-size: 18px;
+  }
+
+  .profile .section-description {
+    font-size: 16px;
+  }
+
+  .profile .input-label {
+    font-size: 16px;
+  }
+
+  .profile .input-group {
+    width: 33%;
+  }
+
+  .profile .input-field {
+    max-width: 100%;
+  }
+
+  .profile .input-row {
+    justify-content: space-between;
+  }
+
+}
+
+
+
+@media (max-width: 681px) {
+
+  .profile .tab-label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .profile .input-label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .profile .section-title {
+    font-size: 16px;
+  }
+
+  .profile.form-container {
+    width: 100%;
+    max-width: none;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .profile .form-container {
+    padding: 0 20px;
+  }
+
+  .profile .tab-label {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .profile .tab:last-child .tab-label {
+    max-width: 100px;
+  }
+
+  .profile .tab-group {
+    justify-content: space-between;
+  }
+
+  .profile .tab {
+    max-width: none;
+    min-width: auto;
+    padding: 8px;
+  }
+
+  .profile .section-title {
+    max-width: 100%;
+  }
+
+  .profile .section-description {
+    max-width: 100%;
+  }
+
+  .profile .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile .input-group {
+    flex: none;
+    width: 100%;
+  }
+
+  .profile .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .profile .button-cancel,
+  .profile .button-save {
+    width: 100%;
+  }
+
+  .profile .subscription-notice {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .profile .mode-selector {
+    max-width: 100%;
+  }
+
+  .profile .plan-option {
+    max-width: 100%;
+  }
+
+  .profile .payment-fields-row {
+    max-width: 100%;
+  }
+
+  .profile .subscription-buttons {
+    max-width: 100%;
+  }
+
+  .profile .subscription-button-cancel {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .profile .subscription-button-unsubscribe {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .profile .subscription-button-submit {
+    padding: 0 20px;
+    white-space: initial;
+    width: 100%;
+  }
+
+  .profile .current-plan {
+    font-size: 16px;
+  }
+
+  .profile .plan-option-label {
+    font-size: 16px;
+  }
+
+  .profile .mode-option {
+    justify-content: flex-start;
+  }
+
+  .profile .payment-notice {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+
+
+
+
+}
+
+
